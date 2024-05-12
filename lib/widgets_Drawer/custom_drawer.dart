@@ -1,12 +1,9 @@
 import 'package:dash_board_responsive/models/item_model.dart';
 import 'package:dash_board_responsive/utils/app_images.dart';
-import 'package:dash_board_responsive/widgets/activate&inactivate.dart';
-import 'package:dash_board_responsive/widgets/custom_info_list_tile.dart';
-import 'package:dash_board_responsive/widgets/custom_list_item.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dash_board_responsive/widgets_Drawer/activate&inactivate.dart';
+import 'package:dash_board_responsive/widgets_Drawer/custom_info_list_tile.dart';
+import 'package:dash_board_responsive/widgets_Drawer/custom_list_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -35,7 +32,9 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  child: SizedBox(),
+                  child: SizedBox(
+                    height: 20,
+                  ),
                 ),
                 InActivateItem(
                   itemModel: ItemModel(
