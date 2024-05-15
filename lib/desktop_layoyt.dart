@@ -1,5 +1,6 @@
+import 'package:dash_board_responsive/widgetAboutApp/customAboutApp.dart';
 import 'package:dash_board_responsive/widgets_Drawer/custom_drawer.dart';
-import 'package:dash_board_responsive/widgets_tap/custom_tap.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/CustomExpensesAndQuickInvoice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -16,7 +17,11 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: CustomTap(),
+          child: CustomExpensesAndQuickInvoice(),
+        ),
+        Expanded(
+          flex: 2,
+          child: CustomAboutApp(),
         ),
       ],
     );

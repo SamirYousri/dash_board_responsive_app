@@ -1,7 +1,7 @@
 // ignore_for_file: camel_case_types
 
-import 'package:dash_board_responsive/widgets_tap/custom_button.dart';
-import 'package:dash_board_responsive/widgets_tap/custom_title_text_feild.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/custom_button.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/custom_title_text_feild.dart';
 import 'package:flutter/material.dart';
 
 class Section2_2 extends StatelessWidget {
@@ -25,7 +25,7 @@ class Section2_2 extends StatelessWidget {
             Expanded(
               child: CustomTitleTextFeild(
                 title: 'Customer Email',
-                hint: 'Type Customer Name',
+                hint: 'Type Customer Email',
               ),
             ),
           ],
@@ -38,7 +38,7 @@ class Section2_2 extends StatelessWidget {
             Expanded(
               child: CustomTitleTextFeild(
                 title: 'Item Name',
-                hint: 'Type Customer Name',
+                hint: 'Type Item Name',
               ),
             ),
             SizedBox(
@@ -47,7 +47,7 @@ class Section2_2 extends StatelessWidget {
             Expanded(
               child: CustomTitleTextFeild(
                 title: 'Item Mount',
-                hint: 'Type Customer Name',
+                hint: 'USD',
               ),
             ),
           ],

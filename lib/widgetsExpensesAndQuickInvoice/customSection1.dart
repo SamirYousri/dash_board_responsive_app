@@ -2,8 +2,8 @@
 
 import 'package:dash_board_responsive/models/espenses_model.dart';
 import 'package:dash_board_responsive/utils/app_images.dart';
-import 'package:dash_board_responsive/widgets_tap/expenses_header.dart';
-import 'package:dash_board_responsive/widgets_tap/itemexpenses.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/expenses_header.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/itemexpenses.dart';
 import 'package:flutter/material.dart';
 
 class CustomSection1 extends StatelessWidget {
@@ -11,16 +11,17 @@ class CustomSection1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.white,
-        ),
-        child: const Column(
+    return const Card(
+      elevation: 0,
+      color: Colors.white,
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
           children: [
             ExpensesHeader(),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               children: [
                 Expanded(
@@ -32,6 +33,9 @@ class CustomSection1 extends StatelessWidget {
                         price: r'$20.129'),
                   ),
                 ),
+                SizedBox(
+                  width: 10,
+                ),
                 Expanded(
                   child: ExpensesItem(
                     expensesModel: ExpensesModel(
@@ -40,6 +44,9 @@ class CustomSection1 extends StatelessWidget {
                         date: 'April 2022',
                         price: r'$20.129'),
                   ),
+                ),
+                SizedBox(
+                  width: 10,
                 ),
                 Expanded(
                   child: ExpensesItem(

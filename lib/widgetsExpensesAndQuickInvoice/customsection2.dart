@@ -1,6 +1,6 @@
-import 'package:dash_board_responsive/widgets_tap/custom_scrol_horizontal.dart';
-import 'package:dash_board_responsive/widgets_tap/quick_invoice_header.dart';
-import 'package:dash_board_responsive/widgets_tap/section2.2.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/custom_scrol_horizontal.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/quick_invoice_header.dart';
+import 'package:dash_board_responsive/widgetsExpensesAndQuickInvoice/section2.2.dart';
 import 'package:flutter/material.dart';
 
 class CustomSection2 extends StatelessWidget {
@@ -8,14 +8,12 @@ class CustomSection2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.white,
-        ),
-        child: const Column(
+    return const Card(
+      elevation: 0,
+      color: Colors.white,
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             QuickInvoiceHeader(),
