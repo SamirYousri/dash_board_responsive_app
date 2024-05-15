@@ -13,20 +13,16 @@ class CustomExpensesAndQuickInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.all(16),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: Column(
-              children: [
-                CustomSection1(),
-                SizedBox(
-                  height: 10,
-                ),
-                CustomSection2(),
-              ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomSection1(),
+            SizedBox(
+              height: 10,
             ),
-          )
-        ],
+            CustomSection2(),
+          ],
+        ),
       ),
     );
   }

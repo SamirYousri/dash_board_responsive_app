@@ -10,20 +10,16 @@ class CustomAboutApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: Column(
-            children: [
-              CustomAboutSection1(),
-              SizedBox(
-                height: 10,
-              ),
-              CustomAboutSection2(),
-            ],
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          CustomAboutSection1(),
+          SizedBox(
+            height: 10,
           ),
-        ),
-      ],
+          CustomAboutSection2(),
+        ],
+      ),
     );
   }
 }
