@@ -1,6 +1,8 @@
 import 'package:dash_board_responsive/models/espenses_model.dart';
 import 'package:dash_board_responsive/utils/app_style.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ExpensesItem extends StatelessWidget {
@@ -22,15 +24,21 @@ class ExpensesItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              Container(
-                height: 60,
-                width: 60,
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Center(
-                  child: SvgPicture.asset(expensesModel.image),
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 50),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[100],
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(expensesModel.image),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const Spacer(),
@@ -42,23 +50,32 @@ class ExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            expensesModel.title,
-            style: AppStyles.styleMedium16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expensesModel.title,
+              style: AppStyles.styleMedium16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            expensesModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expensesModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            expensesModel.price,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              expensesModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),

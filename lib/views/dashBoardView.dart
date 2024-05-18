@@ -26,12 +26,12 @@ class _DashBoardViewState extends State<DashBoardView> {
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xFF4EB7F2),
-              title: IconButton(
-                onPressed: () {
-                  scaffoldKey.currentState!.openDrawer();
-                },
-                icon: const Icon(Icons.menu),
-              ),
+              // title: IconButton(
+              //   onPressed: () {
+              //     scaffoldKey.currentState!.openDrawer();
+              //   },
+              //   icon: const Icon(Icons.abc),
+              // ),
             )
           : null,
       drawer:
